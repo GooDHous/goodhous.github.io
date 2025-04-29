@@ -1,0 +1,90 @@
+*,html,.a,.nav-link,.title,.card{
+    color: white;
+    text-decoration: none
+}
+.title{
+    margin-top: auto;
+    text-align: center;
+}
+.c1,.c2{
+    min-height: 100%;
+    width: 50%;
+
+}
+.c1-img{
+    border-radius: 10px 10px 0 0;
+}
+.c2-img{
+    border-radius: 0 0 10px 10px;
+}
+.card-img-protocol{
+    width: 200%;
+    
+}
+
+.background{
+    width: 80%;
+    padding-bottom: 0.5%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 15px 15px 30px 30px;
+    background-color: rgba(255, 255, 255, 0.164);
+}
+.card-body{
+    background: transparent;
+}
+
+.card{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    min-height: 256px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.164);
+}
+body{
+    background-color: black;
+}
+.nav-item{
+    background-color: rgba(255, 255, 255, 0.08);
+    margin-right: 1.0vh;
+    margin: 0 5px;
+    border-radius: 1.5vh;
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    border-radius:100px ;
+    border: 10px;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 1);
+}
+main{
+    margin: auto;
+}
+button,input,.hrefMain{
+    font-size:x-large;
+}
+
+.content{
+    margin-top: 100px;
+    display: flex;
+
+
+}
+
+
+
+
+.card-img-protocol{
+    transition: 1s;
+    animation-duration: 0.5s;
+}
+.card-img-protocol:hover{
+    width: 300px;
+}
+
+
+
+
