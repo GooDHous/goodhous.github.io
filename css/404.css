@@ -1,0 +1,27 @@
+.e404text{
+    font-size: xx-large;
+    text-align: center;
+    margin: 0 auto;
+}
+.e404image{
+    margin: 0 auto;
+    width: 50%;
+}
+.e404block{
+    text-align: center;
+}
+.e404main{
+    display: flex;
+    border-radius:15px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 200px;
+    height: 60px;
+}
+.e404maintitle{
+    margin: 0 auto;
+}
