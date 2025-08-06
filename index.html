@@ -22,12 +22,16 @@
             box-sizing: border-box;
         }
         
+        html, body {
+            height: 100%;
+        }
+        
         body {
             background: black;
             color: white;
             font-family: system-ui, -apple-system, sans-serif;
-            height: 100%;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
             -moz-user-select: none;
             -webkit-user-select: none;
             -o-user-select: none;
@@ -89,9 +93,11 @@
         
         /* Основное содержимое */
         main {
-            padding: 80px 15px 80px;
+            flex: 1;
+            padding: 80px 15px 70px; /* Уменьшил нижний отступ для футера */
             max-width: 600px;
             margin: 0 auto;
+            width: 100%;
         }
         
         .content {
@@ -176,46 +182,41 @@
             transform: scale(1.05);
         }
         
-        /* Футер */
+        /* Футер в одну строку */
         footer {
+            padding: 10px 15px !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
             position: fixed;
             bottom: 0;
             width: 100%;
-            padding: 15px !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-            background-color: rgba(0, 0, 0, 0.8);
             z-index: 1000;
         }
         
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        
         .footer-logo {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
         }
         
-        .footerText {
-            font-size: 0.9rem;
-            text-align: center;
-            color: #ddd;
-        }
-        
-        .okno {
-            max-height: 60px;
+        .footer-text {
             font-size: 0.8rem;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid #0000cc;
-            border-radius: 8px;
-            color: #ececec;
-            margin-top: 10px;
-            background: rgba(0, 0, 80, 0.2);
+            white-space: nowrap;
+            margin-right: 10px;
+        }
+        
+        .footer-message {
+            font-size: 0.7rem;
+            text-align: right;
+            color: #aaa;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex-grow: 1;
         }
         
         /* Анимации для контента */
@@ -248,15 +249,19 @@
                 font-size: 1.05rem;
             }
             
-            .okno {
+            .footer-text {
                 font-size: 0.9rem;
+            }
+            
+            .footer-message {
+                font-size: 0.8rem;
             }
         }
     </style>
-    <script src="js/index.js"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+    <script src="js/index.js"></script> 
     
     <header class="d-flex py-3 mb-4 border-bottom">
         <div class="header-content">
@@ -266,7 +271,7 @@
             </a>
             
             <ul class="nav">
-                <li class="nav-item"><a href="https://github.com/GooDHous" class="nav-link">Мы</a></li>
+                <li class="nav-item"><a href="https://github.com/GooDHous" class="nav-link">DocFreeman</a></li>
             </ul>
         </div>
     </header>
@@ -313,17 +318,13 @@
         </div>
     </main>
 
-    <footer class="d-flex justify-content-center align-items-center py-3 border-top">
-        <div class="footer-content">
-            <a href="/" class="text-decoration-none">
-                <img src="img/RKN.png" class="footer-logo">
-            </a>
-            <span class="footerText">© 2025 Made by YW Team</span>
-            <div class="okno">
-                <p>Спасибо за посещение.</p>
-            </div>
+    <footer class="d-flex justify-content-between align-items-center py-3 border-top">
+        <div class="d-flex align-items-center">
+            <img src="img/RKN.png" class="footer-logo">
+            <span class="footer-text">© 2025 YW Team</span>
         </div>
+        <div class="footer-message">Спасибо за посещение и использование наших проектов</div>
     </footer>
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
