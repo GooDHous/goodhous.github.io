@@ -1,11 +1,12 @@
 .e404text{
-    font-size: xx-large;
+    font-size: x-large;
     text-align: center;
     margin: 0 auto;
 }
 .e404image{
     margin: 0 auto;
-    width: 50%;
+    width: calc(40% - 100px);
+
 }
 .e404block{
     text-align: center;
@@ -24,4 +25,51 @@
 }
 .e404maintitle{
     margin: 0 auto;
+}
+footer {
+    padding: 10px 15px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.footer-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.footer-message {
+    font-size: 0.7rem;
+    text-align: right;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+
+@media (min-width: 576px) {
+    .footer-text {
+        font-size: 0.9rem;
+    }
+    
+    .footer-message {
+        font-size: 0.8rem;
+    }
 }

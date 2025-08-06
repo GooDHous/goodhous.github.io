@@ -2,48 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shadowsocks | YWTeam</title>
     <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
     <link type="Image/x-icon" href="img/favicon.ico" rel="icon">
     <link rel="icon" href="img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadowsocks \ YWTeam </title>
     <meta property="og:site_name" content="freeVpnKeys" />
-    <meta property="og:description" content="Здесь вы можете бесплатно получить ключ для впн (AmnesiaVPN, Outline, Hiddify, итд)" />
-    <meta property="og:title" content="Бесплатные ключи впн" /> 
-	  <script src="js/keys.js"></script>
+    <meta property="og:description" content="Здесь вы можете бесплатно получить ключ для VPN (AmnesiaVPN, Outline, Hiddify и другие)" />
+    <meta property="og:title" content="Бесплатные ключи VPN" />
     <meta property="og:image" content="https://raw.githubusercontent.com/GooDHous/yorkwillimgrepo/refs/heads/main/3.png" />
     <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="css/shadowsocks.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/shadowsocks.css">
+    <script src="js/keys.js"></script>
 </head>
 <body>
     <script>
-      __init__("ss")
+        __init__("ss");
     </script>
     <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
     <script src="js/script.js"></script>
+    
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/YWTeam/keys" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <img src="img/favicon.ico" class="bi me-2 logo" width="50" height="50"></img>
-          <span class="fs-4 headerTitle">YW Team - Shadowsocks free Vpn Keys</span>
+            <img src="img/favicon.ico" class="bi me-2 logo" width="50" height="50">
+            <span class="fs-4 headerTitle">YW Team - Shadowsocks Keys</span>
         </a>
-  
+        
         <ul class="nav nav-pills">
-          <li class="nav-item"><a href="https://github.com/GooDHous" class="nav-link">Мы</a></li>
+            <li class="nav-item"><a href="https://github.com/GooDHous" class="nav-link">Мы</a></li>
         </ul>
-      </header>
-    <main>
-
+    </header>
     
+    <main>
         <div class="container-input">
-            <input type="text" value="" placeholder="Нажмите получить ключ" id="myInput" readonly>
-            <button onclick=give()>Получить ключ</button>
-            <button onclick="copy()">Скопировать ключ</button>
-
-
+            <input type="text" value="" placeholder="Нажмите 'Получить ключ'" id="myInput" readonly>
+            <div class="button-group">
+                <button onclick="give()">Получить ключ</button>
+                <button onclick="copy()">Скопировать ключ</button>
+            </div>
         </div>
     </main>
-
+    
+    <footer class="d-flex justify-content-between align-items-center py-3 border-top">
+        <div class="d-flex align-items-center">
+            <img src="img/RKN.png" class="footer-logo">
+            <span class="footer-text">© 2025 YW Team</span>
+        </div>
+        <div class="footer-message">Спасибо за посещение</div>
+    </footer>
 </body>
 </html>

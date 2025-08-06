@@ -15,7 +15,6 @@
     <meta property="og:title" content="Получите доступ в свободный интернет!" />
     <meta property="og:image" content="img/favicon.ico" />
     <style>
-        /* Основные стили */
         * {
             margin: 0;
             padding: 0;
@@ -38,7 +37,6 @@
             user-select: none;
         }
         
-        /* Шапка */
         header {
             padding: 10px 15px !important;
             display: flex;
@@ -91,10 +89,9 @@
             padding: 0 !important;
         }
         
-        /* Основное содержимое */
         main {
             flex: 1;
-            padding: 80px 15px 70px; /* Уменьшил нижний отступ для футера */
+            padding: 80px 15px 70px;
             max-width: 600px;
             margin: 0 auto;
             width: 100%;
@@ -138,8 +135,6 @@
         .bottomSpan {
             margin-bottom: 15px !important;
         }
-        
-        /* Кнопки */
         .glow-on-hover {
             width: 100%;
             max-width: 200px;
@@ -182,7 +177,6 @@
             transform: scale(1.05);
         }
         
-        /* Футер в одну строку */
         footer {
             padding: 10px 15px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -201,6 +195,8 @@
             width: 30px;
             height: 30px;
             margin-right: 10px;
+            background-color: white;
+            border-radius: 100px;
         }
         
         .footer-text {
@@ -219,7 +215,6 @@
             flex-grow: 1;
         }
         
-        /* Анимации для контента */
         .content:nth-child(1) { animation: fadeIn 0.6s ease-out; }
         .content:nth-child(2) { animation: fadeIn 0.8s ease-out; }
         .content:nth-child(3) { animation: fadeIn 1.0s ease-out; }
@@ -230,7 +225,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Адаптация для более широких экранов */
         @media (min-width: 576px) {
             .content {
                 padding: 25px;
@@ -323,7 +317,7 @@
             <img src="img/RKN.png" class="footer-logo">
             <span class="footer-text">© 2025 YW Team</span>
         </div>
-        <div class="footer-message">Спасибо за посещение и использование наших проектов</div>
+        <div class="footer-message">Спасибо за посещение</div>
     </footer>
     <script src="js/script.js"></script>
 </body>
