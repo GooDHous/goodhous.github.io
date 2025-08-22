@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -14,259 +14,29 @@
     <meta property="og:description" content="Это сайт, на котором указана информация о нас и наши основные проекты" />
     <meta property="og:title" content="Получите доступ в свободный интернет!" />
     <meta property="og:image" content="img/favicon.ico" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: white;
-        }
-        
-        html, body {
-            height: 100%;
-        }
-        
-        body {
-            background: black;
-            color: white;
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            flex-direction: column;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-        }
-        
-        header {
-            padding: 10px 15px !important;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-between;
-        }
-        
-        .logo {
-            border-radius: 100px;
-            background-color: white;
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-        
-        .headerTitle {
-            font-size: 1.3rem;
-            white-space: nowrap;
-        }
-        
-        .nav {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-item {
-            background-color: rgba(255, 255, 255, 0.08);
-            border-radius: 1.5vh;
-            padding: 5px 10px !important;
-            white-space: nowrap;
-        }
-        
-        .nav-link {
-            color: white !important;
-            font-size: 0.9rem;
-            padding: 0 !important;
-        }
-        
-        main {
-            flex: 1;
-            padding: 80px 15px 70px;
-            max-width: 600px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-            width: 100%;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-        }
-        
-        .content:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contentTitle {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        
-        .contentParagraph {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            color: #ddd;
-        }
-        
-        .content span {
-            display: block;
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-            color: #ccc;
-        }
-        
-        .bottomSpan {
-            margin-bottom: 15px !important;
-        }
-        .glow-on-hover {
-            width: 100%;
-            max-width: 200px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: rgb(233, 233, 233);
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            border-radius: 10px;
-            color: #333;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: all 0.3s;
-        }
-        
-        .glow-on-hover:before {
-            content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            position: absolute;
-            top: -4px;
-            left: -4px;
-            background-size: 800%;
-            z-index: -1;
-            filter: blur(8px);
-            width: calc(100% + 8px);
-            height: calc(100% + 8px);
-            animation: glowing 40s linear infinite;
-            opacity: 1;
-            border-radius: 10px;
-        }
-        
-        @keyframes glowing {
-            0% { background-position: 0 0; }
-            100% { background-position: 800% 0; }
-        }
-        
-        .glow-on-hover:hover {
-            transform: scale(1.05);
-        }
-        
-        footer {
-            padding: 10px 15px !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .footer-logo {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            background-color: white;
-            border-radius: 100px;
-        }
-        
-        .footer-text {
-            font-size: 0.8rem;
-            white-space: nowrap;
-            margin-right: 10px;
-        }
-        
-        .footer-message {
-            font-size: 0.7rem;
-            text-align: right;
-            color: #aaa;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            flex-grow: 1;
-        }
-        
-        .content:nth-child(1) { animation: fadeIn 0.6s ease-out; }
-        .content:nth-child(2) { animation: fadeIn 0.8s ease-out; }
-        .content:nth-child(3) { animation: fadeIn 1.0s ease-out; }
-        .content:nth-child(4) { animation: fadeIn 1.2s ease-out; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @media (min-width: 576px) {
-            .content {
-                padding: 25px;
-            }
-            
-            .contentTitle {
-                font-size: 1.6rem;
-            }
-            
-            .contentParagraph {
-                font-size: 1.05rem;
-            }
-            
-            .glow-on-hover {
-                height: 45px;
-                font-size: 1.05rem;
-            }
-            
-            .footer-text {
-                font-size: 0.9rem;
-            }
-            
-            .footer-message {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
     <script src="js/index.js"></script> 
     
-    <header class="d-flex py-3 mb-4 border-bottom">
+    <header class="d-flex py-3 border-bottom">
         <div class="header-content">
-            <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-                <img src="https://goodhous.github.io/yorkwillimgrepo/57.webp" class="logo">
+            <a href="/" class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
                 <span class="headerTitle">YW Team</span>
             </a>
             
             <ul class="nav">
-                <li class="nav-item"><a href="https://github.com/GooDHous" class="nav-link">DocFreeman</a></li>
+                <li class="nav-item">
+                    <a href="https://github.com/GooDHous" class="nav-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </header>
@@ -274,56 +44,62 @@
     <main>
         <div class="content">
             <div class="contentText">
-                <h3 class="contentTitle">Zapret_Build</h3>
+                <h3 class="contentTitle"><i class="fas fa-unlock-alt"></i> Zapret_Build</h3>
                 <p class="contentParagraph">Данный проект - это наш способ помочь людям получить доступ к заблокированным сайтам и сервисам, таким как YouTube и Discord, на основе оригинальных бинарников Zapret с GitHub bol-van.</p>
-                <span>Особенности:</span>
-                <span>- Система обновления хостов;</span>
-                <span>- Добавление в автозагрузку как сервис;</span>
-                <span class="bottomSpan">- Возможность просмотреть код и убедиться в его безопасности.</span>
-                <button onclick="redirect('https://github.com/GooDHous/Zapret-build/archive/refs/heads/main.zip')" class="glow-on-hover">Скачать Zapret</button>
+                
+                <ul class="feature-list">
+                    <li>Система обновления хостов</li>
+                    <li>Добавление в автозагрузку как сервис</li>
+                    <li>Возможность просмотреть код и убедиться в его безопасности</li>
+                </ul>
+                
+                <button onclick="redirect('https://github.com/GooDHous/Zapret-build')" class="glow-on-hover">
+                    <i class="fas fa-arrow-right"></i> Перейти
+                </button>
             </div>
         </div>
         
         <div class="content">
             <div class="contentText">
-                <h3 class="contentTitle">Free VPN-keys</h3>
+                <h3 class="contentTitle"><i class="fas fa-key"></i> Free VPN-keys</h3>
                 <p class="contentParagraph">Благодаря бесплатным VPN-ключам, вы можете получить доступ к заблокированным сайтам и обходить блокировки в играх.</p>
-                <span>Особенности:</span>
-                <span>- Полностью бесплатно;</span>
-                <span class="bottomSpan">- Поддержка разных впн протоколов.</span>
-                <button onclick="redirect('https://goodhous.github.io/keys')" class="glow-on-hover">Получить ключи</button>
+                
+                <ul class="feature-list">
+                    <li>Полностью бесплатно</li>
+                    <li>Поддержка разных впн протоколов</li>
+                    <li>Регулярное обновление ключей</li>
+                </ul>
+                
+                <button onclick="redirect('https://goodhous.github.io/keys')" class="glow-on-hover">
+                    <i class="fas fa-arrow-right"></i> Перейти
+                </button>
             </div>
         </div>
         
         <div class="content">
             <div class="contentText">
-                <h3 class="contentTitle">YW Team</h3>
+                <h3 class="contentTitle"><i class="fas fa-users"></i> YW Team</h3>
                 <p class="contentParagraph">YW Team (YWT) - наша команда из 3 человек, которая делает программу для обхода блокировок и раздаёт VPN-ключи, предоставляя полный свободный доступ к интернету, стараясь помочь людям.</p>
                 <p class="contentParagraph">У нас есть дискорд, присоединиться к которому вы можете ниже. А еще NikHokDanGD очень сильно помог с созданием этого сайта, спасибо ему!</p>
-                <button onclick="redirect('https://discord.gg/QvStrN3KNS')" class="glow-on-hover">Присоединиться</button>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="contentText">
-                <h3 class="contentTitle">ZHF</h3>
-                <p class="contentParagraph">ZHF (ZapretHostsForm) - наша веб страница, на которой вы можете быстро уведомить нас об очередной блокировке сайта.</p>
-                <button onclick="redirect('https://goodhous.github.io/ZHF')" class="glow-on-hover">Присоединиться</button>
+                
+                <button onclick="redirect('https://discord.gg/QvStrN3KNS')" class="glow-on-hover">
+                    <i class="fab fa-discord"></i> Присоединиться
+                </button>
             </div>
         </div>
     </main>
 
-    <footer class="d-flex justify-content-between align-items-center py-3 border-top">
+    <footer class="d-flex justify-content-between align-items-center border-top">
         <div class="d-flex align-items-center">
-            <img src="img/RKN.png" class="footer-logo">
+            <div class="footer-logo">
+                <i class="fas fa-heart"></i>
+            </div>
             <span class="footer-text">© 2025 YW Team</span>
         </div>
-        <div class="footer-message">Спасибо за посещение</div>
+        <div class="footer-message">Свободный интернет для всех</div>
     </footer>
+    
+    
     <script src="./js/script.js"></script>
 </body>
-
 </html>
-
-
-
