@@ -1,4 +1,4 @@
-/* Основные стили */
+        /* Основные стили */
         * {
             margin: 0;
             padding: 0;
@@ -77,7 +77,7 @@
         input {
             width: 100%;
             padding: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-radius: 10px;
             border: none;
             background-color: rgba(255, 255, 255, 0.1);
@@ -88,6 +88,18 @@
         
         input::placeholder {
             color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .key-name {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .button-group {
@@ -140,8 +152,14 @@
                 padding: 12px;
                 font-size: 0.9rem;
             }
+            
+            .key-name {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
         }
-                /* Футер в одну строку */
+        
+        /* Футер в одну строку */
         footer {
             padding: 10px 15px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -180,7 +198,6 @@
             flex-grow: 1;
         }
         
-
         @media (min-width: 576px) {
             .footer-text {
                 font-size: 0.9rem;
