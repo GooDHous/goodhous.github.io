@@ -36,7 +36,10 @@
     
     <main>
         <div class="container-input">
-            <input type="text" value="" placeholder="Нажмите 'Получить ключ'" id="myInput" readonly>
+            <input type="text" value="" autocomplete="off" placeholder="Нажмите 'Получить ключ'" id="myInput" readonly>
+            <div class="key-name" id="keyNameDisplay">
+                <span style="color: gray;" id="keyName"> Имя ключа:   </span>
+            </div>
             <div class="button-group">
                 <button onclick="give()">Получить ключ</button>
                 <button onclick="copy()">Скопировать ключ</button>
