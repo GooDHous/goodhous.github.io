@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="darkreader-lock">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Клиенты | YWTeam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./css/vpnclients.css">
+    <link rel="stylesheet" href="./css/noScrollBar.css">
+    <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+    <header class="d-flex py-3 border-bottom">
+        <div class="header-content">
+            <a href="/" class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-key"></i>
+                </div>
+                <span class="headerTitle">YW Team</span>
+            </a>
+            
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Главная</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="Поиск по названию, ОС, протоколу или описанию...">
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-protocol="all">
+                    <i class="fas fa-layer-group"></i>
+                    Все
+                </button>
+                <button class="filter-btn ss" data-protocol="ss">
+                    <i class="fas fa-shield-alt"></i>
+                    Shadowsocks
+                </button>
+                <button class="filter-btn vless" data-protocol="vless">
+                    <i class="fas fa-bolt"></i>
+                    Vless
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-section">
+        <h1 class="hero-title">VPN клиенты</h1>
+    </div>
+    
+    <main>
+        <div class="container-main">
+            <div class="clients-grid">
+
+                <div class="client-card" data-protocols="ss" data-priority="1">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/OutlineVpn.png" alt="Outline Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-server" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">Outline</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Windows</span>
+                            <span class="platform-tag">macOS</span>
+                            <span class="platform-tag">Linux</span>
+                            <span class="platform-tag">iOS</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Простой и надежный клиент от команды Google Jigsaw</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Простая настройка</li>
+                            <li><i class="fas fa-check"></i> Высокая скорость</li>
+                            <li><i class="fas fa-check"></i> Поддержка передачи ключа QR-кодом</li>
+                        </ul>
+                        <a href="https://getoutline.org/intl/ru/get-started/#step-3" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+
+                <div class="client-card" data-protocols="vless,ss" data-priority="2">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/HiddifyVpn.png" alt="Hiddify Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-box-open" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">Hiddify</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Android</span>
+                            <span class="platform-tag">iOS</span>
+                            <span class="platform-tag">Windows</span>
+                            <span class="platform-tag">macOS</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Многофункциональный клиент с поддержкой множества протоколов</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Автоматическая конфигурация</li>
+                            <li><i class="fas fa-check"></i> Встроенные правила обхода</li>
+                        </ul>
+                        <a href="https://github.com/hiddify/hiddify-app/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+
+                <div class="client-card" data-protocols="vless,ss" data-priority="3">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/AmnesiaVpn.png" alt="AmnesiaVPN Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-brain" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">AmnesiaVPN</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Windows</span>
+                            <span class="platform-tag">macOS</span>
+                            <span class="platform-tag">Linux</span>
+                            <span class="platform-tag">Android</span>
+                            <span class="platform-tag">iOS</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Многофункциональный клиент с поддержкой VLESS и Shadowsocks</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Поддержка VLESS XTLS</li>
+                            <li><i class="fas fa-check"></i> Автоматический выбор протокола</li>
+
+                            <li><i class="fas fa-check"></i> Кроссплатформеннность</li>
+                        </ul>
+                        <a href="https://github.com/amnezia-vpn/amnezia-client/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="ss">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/ShadowSocksX-NG.png" alt="ShadowsocksX-NG Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-rocket" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">ShadowsocksX-NG</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">macOS</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Популярный клиент для macOS с поддержкой всех функций</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Автозапуск</li>
+                            <li><i class="fas fa-check"></i> PAC-режим</li>
+                            <li><i class="fas fa-check"></i> Глобальный режим</li>
+                        </ul>
+                        <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="ss">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/ShadowSocks-android.png" alt="Shadowsocks Android Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-mobile-alt" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">Shadowsocks Android</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Android</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Официальный клиент для Android устройств</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Поддержка плагинов</li>
+                            <li><i class="fas fa-check"></i> IPv6 поддержка</li>
+                            <li><i class="fas fa-check"></i> Автоподключение</li>
+                        </ul>
+                        <a href="https://github.com/shadowsocks/shadowsocks-android/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="vless,ss">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/v2rayNG.avif" alt="v2rayNG Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-tachometer-alt" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">v2rayNG</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Android</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Лучший клиент для Android с поддержкой V2Ray</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Поддержка всех протоколов</li>
+                            <li><i class="fas fa-check"></i> Добавление ключа через QR</li>
+                        </ul>
+                        <a href="https://github.com/2dust/v2rayNG/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="vless,ss">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/Qv2ray.webp" alt="Qv2ray Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-desktop" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">Qv2ray</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Windows</span>
+                            <span class="platform-tag">macOS</span>
+                            <span class="platform-tag">Linux</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Кроссплатформенный клиент с поддержкой плагинов</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Поддержка плагинов</li>
+                            <li><i class="fas fa-check"></i> Группировка подключений</li>
+                            <li><i class="fas fa-check"></i> Расширенная статистика</li>
+                        </ul>
+                        <a href="https://github.com/Qv2ray/Qv2ray/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="vless">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/V2RayTun.png" alt="V2RayTun Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-mobile-alt" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">V2RayTun</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Android</span>
+                            <span class="platform-tag">iOS</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">V2RayTun - клиент для Android с улучшенной производительностью</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> Поддержка VLESS/XTLS</li>
+                            <li><i class="fas fa-check"></i> Добавление ключа через QR</li>
+                            <li><i class="fas fa-check"></i> Экономное использование батареи</li>
+                        </ul>
+                        <a href="https://v2raytun.com/#download" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="client-card" data-protocols="vless,ss">
+                    <div class="client-header">
+                        <div class="client-icon">
+                            <img src="img/v2rayN.avif" alt="V2RayN Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-wind" style="display:none;"></i>
+                        </div>
+                        <h3 class="client-title">V2RayN</h3>
+                        <div class="client-platforms">
+                            <span class="platform-tag">Windows</span>
+                            <span class="platform-tag">macOS</span>
+                            <span class="platform-tag">Linux</span>
+                        </div>
+                        <div class="client-protocols">
+                            <span class="protocol-tag vless">VLESS</span>
+                            <span class="protocol-tag ss">Shadowsocks</span>
+                        </div>
+                    </div>
+                    <div class="client-body">
+                        <p class="client-description">Популярный клиент для Windows с простым интерфейсом</p>
+                        <ul class="client-features">
+                            <li><i class="fas fa-check"></i> PAC-режим</li>
+                            <li><i class="fas fa-check"></i> Глобальный режим</li>
+                            <li><i class="fas fa-check"></i> Добавление ключа через QR</li>
+                        </ul>
+                        <a href="https://github.com/2dust/v2rayN/releases/latest" class="client-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="d-flex justify-content-between align-items-center border-top">
+        <div class="d-flex align-items-center">
+            <div class="footer-logo">
+                <i class="fas fa-heart"></i>
+            </div>
+            <span class="footer-text">© 2025 YW Team</span>
+        </div>
+        <div class="footer-message">Свободный интернет для всех</div>
+    </footer>
+    
+    <script src="./js/scroll.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/vpnclients.js"></script>
+</body>
+
+</html>
+
