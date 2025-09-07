@@ -67,6 +67,11 @@ header {
 
 }
 
+header.scrolled {
+    padding: 10px 5% !important;
+    background: rgba(10, 10, 10, 0.95)!important;
+}
+
 .header-content {
     display: flex;
     align-items: center;
