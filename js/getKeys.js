@@ -27,7 +27,7 @@ async function __init__(protocol) {
   const url = "https://raw.githubusercontent.com/GooDHous/KS/refs/heads/main/keys.json" 
   let response = await fetch(url);
   window.stn = {
-    type :  protocol,
+    type : protocol,
     keys : await response.json()
   };
 }
