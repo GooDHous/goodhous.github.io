@@ -51,3 +51,12 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+
+function copyEmail() {
+    const email = "conduct@ywteam.org";
+    navigator.clipboard.writeText(email).then(() => {
+        alert("Email скопирован в буфер обмена!");
+    });
+}
+        
+
