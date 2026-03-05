@@ -12,14 +12,14 @@ new Snow ({
 });
 
 function copyCommand() {
-    const command = "irm get.ywteam.ru | iex";
+    const command = "irm https://get.ywteam.ru/install.ps1 | iex";
     navigator.clipboard.writeText(command).then(() => {
         alert("Команда скопирована в буфер обмена!");
     });
 }
 
 function copyUninstallCommand() {
-    const command = "irm get.ywteam.ru/uninstall | iex";
+    const command = "irm https//get.ywteam.ru/uninstall.ps1 | iex";
     navigator.clipboard.writeText(command).then(() => {
         alert("Команда скопирована в буфер обмена!");
     });
@@ -52,11 +52,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-function copyEmail() {
-    const email = "conduct@ywteam.org";
-    navigator.clipboard.writeText(email).then(() => {
-        alert("Email скопирован в буфер обмена!");
-    });
+
 }
         
+
 
