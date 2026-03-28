@@ -53,7 +53,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-}
-        
+   
 
 
