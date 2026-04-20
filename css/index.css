@@ -1,18 +1,26 @@
+@font-face {
+    font-family: 'Muli'; 
+    src: url('/Muli.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; 
+}
+
 :root {
-    --primary: #0a84ff;
-    --primary-dark: #0066cc;
+    --primary: #ff6f00d8;
+    --primary-dark: #da5e00d5;
     --secondary: #ff375f;
-    --accent: #bf5af2;
+    --accent: #2a6effe0;
     --dark: #121212;
     --darker: #0a0a0a;
-    --card-bg: rgba(25, 25, 25, 0.8);
+    --card-bg: rgba(25, 25, 25, 0.6);
     --text-primary: #ffffff;
     --text-secondary: #b0b0b0;
-    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
-    --glow: 0 0 15px rgba(10, 132, 255, 0.5);
+    --gradient: linear-gradient(135deg, #ff6f00b4, #2a8dffb2);
+    --glow: 0 0 15px rgba(255, 141, 10, 0.404);
 }
 
 * {
+    font-family: Muli;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,9 +32,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    background: var(--dark);
     color: var(--text-primary);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     display: flex;
     flex-direction: column;
     -moz-user-select: none;
@@ -46,10 +53,29 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(59, 92, 255, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(191, 90, 242, 0.15) 0%, transparent 40%) !important;
-    z-index: -1;
+        radial-gradient(circle at 20% 30%, #ff6f0031 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, #0051ff50 0%, transparent 40%);
+    z-index: -1; 
 }
+
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-repeat:repeat;
+    background-position: center;
+    background-size: contain; 
+    opacity: 1; 
+    text-align: center;
+    
+    pointer-events: none; 
+    z-index: -2; 
+}
+
 
 header {
     padding: 15px 5% !important;
@@ -142,7 +168,7 @@ header.scrolled {
 main {
     flex: 1;
     padding: 100px 5% 90px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     width: 100%;
 }
@@ -343,15 +369,11 @@ footer {
 
 
 
-
 @media (max-width: 768px) {
     .content,
     .logo,
     .nav-item,
     .glow-on-hover,
-    .back-to-top {
-        transition: none;
-    }
     .loading-bar{
         display: none;
     }
@@ -408,6 +430,7 @@ footer {
     }
     
     .back-to-top {
+        transition: none;
         bottom: 70px;
         right: 15px;
         width: 45px;
