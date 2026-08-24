@@ -34,7 +34,7 @@
 let currentQR = null;
 let responseKeys;
 const url = "https://raw.githubusercontent.com/GooDHous/KS/refs/heads/main/keys.json";
-const altUrl = "https://ywteam.ru/data/keys.json";
+const altUrl = "https://ywteam.online/data/keys.json";
 
 const backupKeys = {
   "ss": [
