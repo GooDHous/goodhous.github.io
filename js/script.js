@@ -23,7 +23,7 @@
 
 new Snow ({			
         showSnowBalls: false,
-        icon:'<div style="border-radius:50%; display:flex; width:16px; height:16px; background-color:white;"> <img src="https://ywteam.ru/img/sf.ico" height="16px" width"16px"" alt="">',
+        icon:'<div style="border-radius:50%; display:flex; width:16px; height:16px; background-color:white;"> <img src="https://ywteam.online/img/sf.ico" height="16px" width"16px"" alt="">',
 		showSnowBallsIsMobile: false,
 		showSnowflakes: true,
 		countSnowflake: 40,
@@ -35,14 +35,14 @@ new Snow ({
 });
 
 function copyCommand() {
-    const command = "irm https://get.ywteam.ru/install.ps1 | iex";
+    const command = "irm https://get.ywteam.online/install.ps1 | iex";
     navigator.clipboard.writeText(command).then(() => {
         alert("Команда скопирована в буфер обмена!");
     });
 }
 
 function copyUninstallCommand() {
-    const command = "irm https//get.ywteam.ru/uninstall.ps1 | iex";
+    const command = "irm https//get.ywteam.online/uninstall.ps1 | iex";
     navigator.clipboard.writeText(command).then(() => {
         alert("Команда скопирована в буфер обмена!");
     });
